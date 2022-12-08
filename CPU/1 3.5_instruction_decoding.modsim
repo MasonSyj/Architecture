@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ModuleSim>
+  <view camX="131.37672919121923" camY="117.0563476156463" zoom="3"/>
+  <ModuleSim>
+    <module ID="0" type="DEMUX">
+      <dim orient="0" x="-350.0" y="0.0"/>
+      <inputs>
+        <input ID="1"/>
+        <input ID="2"/>
+      </inputs>
+      <outputs>
+        <output ID="3"/>
+        <output ID="4"/>
+        <output ID="5"/>
+        <output ID="6"/>
+        <output ID="7"/>
+      </outputs>
+      <data label="controled by LSB" label_size="0"/>
+    </module>
+    <module ID="8" type="DEMUX">
+      <dim orient="0" x="-200.0" y="-225.0"/>
+      <inputs>
+        <input ID="9"/>
+        <input ID="10"/>
+      </inputs>
+      <outputs>
+        <output ID="11"/>
+        <output ID="12"/>
+        <output ID="13"/>
+        <output ID="14"/>
+        <output ID="15"/>
+      </outputs>
+      <data label="Controled by MSB" label_size="0"/>
+    </module>
+    <module ID="16" type="SWITCH">
+      <dim orient="0" x="-350.0" y="175.0"/>
+      <inputs/>
+      <outputs>
+        <output ID="17"/>
+      </outputs>
+      <data label="" label_size="0" switch_set="0001"/>
+    </module>
+    <module ID="18" type="REGISTER">
+      <dim orient="0" x="50.0" y="-125.0"/>
+      <inputs>
+        <input ID="19"/>
+        <input ID="20"/>
+      </inputs>
+      <outputs>
+        <output ID="21"/>
+        <output ID="22"/>
+      </outputs>
+      <data label="" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="23" type="DEMUX">
+      <dim orient="0" x="-425.0" y="-225.0"/>
+      <inputs>
+        <input ID="24"/>
+        <input ID="25"/>
+      </inputs>
+      <outputs>
+        <output ID="26"/>
+        <output ID="27"/>
+        <output ID="28"/>
+        <output ID="29"/>
+        <output ID="30"/>
+      </outputs>
+      <data label="controled by MSB of opcode" label_size="0"/>
+    </module>
+    <module ID="31" type="SPLIT_MERGE">
+      <dim orient="0" x="75.0" y="-200.0"/>
+      <inputs>
+        <input ID="32"/>
+        <input ID="33"/>
+      </inputs>
+      <outputs>
+        <output ID="34"/>
+        <output ID="35"/>
+        <output ID="36"/>
+        <output ID="37"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="38" type="LEDMatrix">
+      <dim orient="0" x="-425.0" y="-475.0"/>
+      <inputs>
+        <input ID="39"/>
+        <input ID="40"/>
+        <input ID="41"/>
+        <input ID="42"/>
+        <input ID="43"/>
+      </inputs>
+      <outputs/>
+      <data label="First Four instructions" label_size="0"/>
+    </module>
+    <module ID="44" type="LEDMatrix">
+      <dim orient="0" x="-200.0" y="-475.0"/>
+      <inputs>
+        <input ID="45"/>
+        <input ID="46"/>
+        <input ID="47"/>
+        <input ID="48"/>
+        <input ID="49"/>
+      </inputs>
+      <outputs/>
+      <data label="Last 4 instructions" label_size="0"/>
+    </module>
+    <module ID="50" type="RAM">
+      <dim orient="0" x="75.0" y="100.0"/>
+      <inputs>
+        <input ID="51"/>
+        <input ID="52"/>
+        <input ID="53"/>
+        <input ID="54"/>
+        <input ID="55"/>
+        <input ID="56"/>
+        <input ID="57"/>
+      </inputs>
+      <outputs>
+        <output ID="58"/>
+        <output ID="59"/>
+        <output ID="60"/>
+      </outputs>
+      <data label="" label_size="0" memory_store="00&#9;" write_jumper="0"/>
+    </module>
+  </ModuleSim>
+  <links>
+    <link src="3" targ="24" type="StraightPath">
+      <ctrlPt x="-400.0" y="-125.0"/>
+      <ctrlPt x="-425.0" y="-125.0"/>
+    </link>
+    <link src="4" targ="9" type="StraightPath">
+      <ctrlPt x="-375.0" y="-125.0"/>
+      <ctrlPt x="-200.0" y="-125.0"/>
+    </link>
+    <link src="11" targ="45" type="StraightPath"/>
+    <link src="12" targ="46" type="StraightPath"/>
+    <link src="13" targ="47" type="StraightPath"/>
+    <link src="14" targ="48" type="StraightPath"/>
+    <link src="15" targ="25" type="StraightPath"/>
+    <link src="17" targ="1" type="StraightPath"/>
+    <link src="21" targ="32" type="StraightPath"/>
+    <link src="26" targ="39" type="StraightPath"/>
+    <link src="27" targ="40" type="StraightPath"/>
+    <link src="28" targ="41" type="StraightPath"/>
+    <link src="29" targ="42" type="StraightPath"/>
+    <link src="34" targ="10" type="StraightPath"/>
+    <link src="36" targ="2" type="StraightPath">
+      <ctrlPt x="100.0" y="-275.0"/>
+      <ctrlPt x="175.0" y="-275.0"/>
+      <ctrlPt x="175.0" y="-50.0"/>
+      <ctrlPt x="-75.0" y="-50.0"/>
+      <ctrlPt x="-75.0" y="0.0"/>
+    </link>
+    <link src="58" targ="19" type="StraightPath"/>
+  </links>
+</ModuleSim>

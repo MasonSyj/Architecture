@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ModuleSim>
+  <view camX="344.8306663758442" camY="381.84436767438945" zoom="3"/>
+  <ModuleSim>
+    <module ID="0" type="ADDSUB">
+      <dim orient="0" x="-400.0" y="-575.0"/>
+      <inputs>
+        <input ID="4"/>
+        <input ID="5"/>
+        <input ID="6"/>
+      </inputs>
+      <outputs>
+        <output ID="1"/>
+        <output ID="2"/>
+        <output ID="3"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="7" type="REGISTER">
+      <dim orient="0" x="-650.0" y="-300.0"/>
+      <inputs>
+        <input ID="8"/>
+        <input ID="9"/>
+      </inputs>
+      <outputs>
+        <output ID="10"/>
+        <output ID="11"/>
+      </outputs>
+      <data label="A" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="12" type="REGISTER">
+      <dim orient="0" x="-425.0" y="-300.0"/>
+      <inputs>
+        <input ID="13"/>
+        <input ID="14"/>
+      </inputs>
+      <outputs>
+        <output ID="15"/>
+        <output ID="16"/>
+      </outputs>
+      <data label="B" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="17" type="REGISTER">
+      <dim orient="0" x="-275.0" y="-350.0"/>
+      <inputs>
+        <input ID="18"/>
+        <input ID="19"/>
+      </inputs>
+      <outputs>
+        <output ID="20"/>
+        <output ID="21"/>
+      </outputs>
+      <data label="Holding" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="22" type="REGISTER">
+      <dim orient="0" x="-400.0" y="0.0"/>
+      <inputs>
+        <input ID="23"/>
+        <input ID="24"/>
+      </inputs>
+      <outputs>
+        <output ID="25"/>
+        <output ID="26"/>
+      </outputs>
+      <data label="PC" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="27" type="REGISTER">
+      <dim orient="0" x="-600.0" y="0.0"/>
+      <inputs>
+        <input ID="28"/>
+        <input ID="29"/>
+      </inputs>
+      <outputs>
+        <output ID="30"/>
+        <output ID="31"/>
+      </outputs>
+      <data label="Operand" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="32" type="REGISTER">
+      <dim orient="0" x="-200.0" y="0.0"/>
+      <inputs>
+        <input ID="33"/>
+        <input ID="34"/>
+      </inputs>
+      <outputs>
+        <output ID="35"/>
+        <output ID="36"/>
+      </outputs>
+      <data label="Opcode" label_size="0" latched_value="0000"/>
+    </module>
+    <module ID="37" type="FANOUT">
+      <dim orient="0" x="-650.0" y="-400.0"/>
+      <inputs>
+        <input ID="42"/>
+      </inputs>
+      <outputs>
+        <output ID="38"/>
+        <output ID="39"/>
+        <output ID="40"/>
+        <output ID="41"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="43" type="FANOUT">
+      <dim orient="0" x="-425.0" y="-400.0"/>
+      <inputs>
+        <input ID="48"/>
+      </inputs>
+      <outputs>
+        <output ID="44"/>
+        <output ID="45"/>
+        <output ID="46"/>
+        <output ID="47"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="49" type="FANOUT">
+      <dim orient="0" x="-600.0" y="-100.0"/>
+      <inputs>
+        <input ID="54"/>
+      </inputs>
+      <outputs>
+        <output ID="50"/>
+        <output ID="51"/>
+        <output ID="52"/>
+        <output ID="53"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="55" type="FANOUT">
+      <dim orient="0" x="-400.0" y="-100.0"/>
+      <inputs>
+        <input ID="60"/>
+      </inputs>
+      <outputs>
+        <output ID="56"/>
+        <output ID="57"/>
+        <output ID="58"/>
+        <output ID="59"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="61" type="MUX">
+      <dim orient="0" x="-25.0" y="-475.0"/>
+      <inputs>
+        <input ID="64"/>
+        <input ID="65"/>
+        <input ID="66"/>
+        <input ID="67"/>
+        <input ID="68"/>
+      </inputs>
+      <outputs>
+        <output ID="62"/>
+        <output ID="63"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+  </ModuleSim>
+  <links>
+    <link src="1" targ="18" type="StraightPath">
+      <ctrlPt x="-400.0" y="-700.0"/>
+      <ctrlPt x="-125.0" y="-700.0"/>
+      <ctrlPt x="-125.0" y="-225.0"/>
+      <ctrlPt x="-275.0" y="-225.0"/>
+    </link>
+    <link src="62" targ="6" type="StraightPath">
+      <ctrlPt x="-25.0" y="-575.0"/>
+    </link>
+    <link src="10" targ="42" type="StraightPath"/>
+    <link src="15" targ="48" type="StraightPath"/>
+    <link src="30" targ="54" type="StraightPath"/>
+    <link src="25" targ="60" type="StraightPath"/>
+  </links>
+</ModuleSim>
