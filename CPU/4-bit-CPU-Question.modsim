@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ModuleSim>
-  <view camX="-324.86220850624295" camY="33.945673220066624" zoom="3"/>
+  <view camX="-6389.428407110565" camY="-3676.1865950861234" zoom="3"/>
   <ModuleSim>
     <module ID="0" type="ADDSUB">
       <dim orient="0" x="75.0" y="-300.0"/>
@@ -26,7 +26,7 @@
         <output ID="10"/>
         <output ID="11"/>
       </outputs>
-      <data label="Holding Reg" label_size="1" latched_value="0100"/>
+      <data label="Holding Reg" label_size="1" latched_value="1100"/>
     </module>
     <module ID="12" type="SWITCH">
       <dim orient="0" x="1800.0" y="475.0"/>
@@ -92,7 +92,7 @@
         <output ID="42"/>
         <output ID="43"/>
       </outputs>
-      <data label="PC" label_size="1" latched_value="1001"/>
+      <data label="PC" label_size="1" latched_value="0000"/>
     </module>
     <module ID="44" type="REGISTER">
       <dim orient="0" x="-200.0" y="375.0"/>
@@ -104,7 +104,7 @@
         <output ID="47"/>
         <output ID="48"/>
       </outputs>
-      <data label="Reg A" label_size="1" latched_value="1010"/>
+      <data label="Reg A" label_size="1" latched_value="0000"/>
     </module>
     <module ID="49" type="FANOUT">
       <dim orient="0" x="150.0" y="725.0"/>
@@ -129,7 +129,7 @@
         <output ID="58"/>
         <output ID="59"/>
       </outputs>
-      <data label="Op Code" label_size="1" latched_value="0011"/>
+      <data label="Op Code" label_size="1" latched_value="0000"/>
     </module>
     <module ID="60" type="REGISTER">
       <dim orient="0" x="225.0" y="375.0"/>
@@ -141,7 +141,7 @@
         <output ID="63"/>
         <output ID="64"/>
       </outputs>
-      <data label="Reg B" label_size="1" latched_value="0100"/>
+      <data label="Reg B" label_size="1" latched_value="0000"/>
     </module>
     <module ID="65" type="FANOUT">
       <dim orient="0" x="-200.0" y="250.0"/>
@@ -166,7 +166,7 @@
         <output ID="74"/>
         <output ID="75"/>
       </outputs>
-      <data label="O Reg" label_size="1" latched_value="1010"/>
+      <data label="O Reg" label_size="1" latched_value="0000"/>
     </module>
     <module ID="76" type="MUX">
       <dim orient="0" x="275.0" y="-75.0"/>
@@ -207,7 +207,7 @@
         <output ID="94"/>
         <output ID="95"/>
       </outputs>
-      <data label="" label_size="0" latched_value="0011"/>
+      <data label="" label_size="0" latched_value="0000"/>
     </module>
     <module ID="96" type="REGISTER">
       <dim orient="0" x="1775.0" y="-75.0"/>
@@ -219,7 +219,7 @@
         <output ID="99"/>
         <output ID="100"/>
       </outputs>
-      <data label="" label_size="0" latched_value="0010"/>
+      <data label="" label_size="0" latched_value="0000"/>
     </module>
     <module ID="101" type="CLOCK">
       <dim orient="0" x="2050.0" y="-50.0"/>
@@ -228,7 +228,7 @@
         <output ID="102"/>
         <output ID="103"/>
       </outputs>
-      <data clock_phase="0" label="" label_size="0"/>
+      <data clock_phase="1" label="" label_size="0"/>
     </module>
     <module ID="104" type="DEMUX">
       <dim orient="0" x="1775.0" y="-325.0"/>
@@ -867,6 +867,79 @@
       </outputs>
       <data label="Mux A/PC/0-1" label_size="1"/>
     </module>
+    <module ID="441" type="SPLIT_MERGE">
+      <dim orient="2" x="1000.0" y="1475.0"/>
+      <inputs>
+        <input ID="442"/>
+        <input ID="443"/>
+      </inputs>
+      <outputs>
+        <output ID="444"/>
+        <output ID="445"/>
+        <output ID="446"/>
+        <output ID="447"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="448" type="SWITCH">
+      <dim orient="0" x="1150.0" y="1600.0"/>
+      <inputs/>
+      <outputs>
+        <output ID="449"/>
+      </outputs>
+      <data label="" label_size="0" switch_set="0000"/>
+    </module>
+    <module ID="450" type="SWITCH">
+      <dim orient="0" x="1000.0" y="1600.0"/>
+      <inputs/>
+      <outputs>
+        <output ID="451"/>
+      </outputs>
+      <data label="" label_size="0" switch_set="0000"/>
+    </module>
+    <module ID="452" type="MUX">
+      <dim orient="0" x="825.0" y="1400.0"/>
+      <inputs>
+        <input ID="455"/>
+        <input ID="456"/>
+        <input ID="457"/>
+        <input ID="458"/>
+        <input ID="459"/>
+      </inputs>
+      <outputs>
+        <output ID="453"/>
+        <output ID="454"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="460" type="SPLIT_MERGE">
+      <dim orient="2" x="725.0" y="1650.0"/>
+      <inputs>
+        <input ID="461"/>
+        <input ID="462"/>
+      </inputs>
+      <outputs>
+        <output ID="463"/>
+        <output ID="464"/>
+        <output ID="465"/>
+        <output ID="466"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
+    <module ID="467" type="SPLIT_MERGE">
+      <dim orient="2" x="3100.0" y="1650.0"/>
+      <inputs>
+        <input ID="468"/>
+        <input ID="469"/>
+      </inputs>
+      <outputs>
+        <output ID="470"/>
+        <output ID="471"/>
+        <output ID="472"/>
+        <output ID="473"/>
+      </outputs>
+      <data label="" label_size="0"/>
+    </module>
   </ModuleSim>
   <links>
     <link src="1" targ="38" type="StraightPath"/>
@@ -1253,6 +1326,11 @@
     <link src="395" targ="331" type="StraightPath">
       <ctrlPt x="1950.0" y="3400.0"/>
       <ctrlPt x="1275.0" y="3400.0"/>
+    </link>
+    <link src="449" targ="444" type="StraightPath"/>
+    <link src="451" targ="445" type="StraightPath"/>
+    <link src="442" targ="459" type="StraightPath">
+      <ctrlPt x="1025.0" y="1400.0"/>
     </link>
   </links>
 </ModuleSim>
