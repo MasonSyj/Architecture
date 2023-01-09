@@ -4,7 +4,7 @@
 _start:
 
    mov r0, #3
-   tst r0, #1
+   tst r0, #1 
    mov r0, #4
    tst r0, #1
 
