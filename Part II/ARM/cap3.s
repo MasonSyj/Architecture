@@ -11,6 +11,10 @@ _start:
    ldr r0, =_data
    ldr r1, [r0, #4]!
    b _loop
+   
+   mov r13, r0 @
+   ldr r0, =_data
+   stmia r0!, {r1-r12}
 
 _loop:
    cmp r1, r9 @ a[i] == '\0'
@@ -32,7 +36,6 @@ _loop:
    add r1, r1, r8 @ 'A' - 'a'
    ldr r1, [r0, #4]!
    b _loop
-
 
 _end:
    b _end
