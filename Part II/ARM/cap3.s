@@ -10,15 +10,15 @@ _start:
    sub r8, r8, r11
    ldr r0, =_data
    ldr r1, [r0, #4]!
-   b _loop
-   
-   mov r13, r0 @
+   bl _loop
+   add r12, r0, #4
    ldr r0, =_data
-   stmia r0!, {r1-r12}
-
+   b _check
+   
+  
 _loop:
    cmp r1, r9 @ a[i] == '\0'
-   beq _end
+   moveq pc, lr
 
    ldr r2, [r0, #-4]
    cmp r2, r10 @ a[i - 1] == ' '
@@ -34,8 +34,17 @@ _loop:
    bgt _loop
 
    add r1, r1, r8 @ 'A' - 'a'
+   str r1, [r0]
    ldr r1, [r0, #4]!
    b _loop
+
+_check:
+
+   ldmia r0!, {r1-r10}
+   cmp r0, r12
+   beq _end
+   b _check
+   
 
 _end:
    b _end

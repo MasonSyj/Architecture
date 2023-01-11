@@ -3,14 +3,11 @@
 .global _start
 _start: 
    mov r0, #0x7fffffff
+   adds r0, r0, #0x7fffffff @oVerflow
    mov r1, #1
-   add r0, r0, r1
-   mov r0, #0xffffffff
-   add r0, r0, r1
-   mov r2, #2
-   cmp r1, r2
-   mov r1, r2
-   cmp r1, r2
+   cmp r1, #1 @Z
+   cmp r1, #2 @N
+   cmp r1, #0 @C
 
    bal _end
 
